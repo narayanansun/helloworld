@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pip install -r requirements.txt' // Install Python dependencies
                 sh 'pyinstaller --onefile https://github.com/narayanansun/helloworld.py' // Build the executable
-                git branch: 'main', url: 'https://github.com/narayanansun/helloworld.py'
             }
         }
     }
