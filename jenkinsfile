@@ -5,7 +5,7 @@ pipeline {
             steps {
                 // Add your build steps here
                 // For example, use PyInstaller to package your Python app
-                python helloworld.py'
+                sh python helloworld.py'
             }
         }
     }
