@@ -3,7 +3,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pyinstaller --onefile https://github.com/narayanansun/helloworld.py' // Build the executable
+                // Add your build steps here
+                // For example, use PyInstaller to package your Python app
+                sh 'pip install pyinstaller'
+                sh 'pyinstaller --onefile helloworld.py'
             }
         }
     }
