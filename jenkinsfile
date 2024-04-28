@@ -1,9 +1,9 @@
 pipeline{
     agent any
-    stages {
-        stage ('helloworld') {
+        stage('Build') {
             steps {
+                git branch: 'main', url: 'https://github.com/narayanansun/helloworld.py'
+                sh 'python3 ops.py'
             }
         }
-    }
 }
